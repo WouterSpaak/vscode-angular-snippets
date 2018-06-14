@@ -438,5 +438,89 @@
     "prefix": "a-rxjs-operator-import",
     "description": "RxJs import",
     "body": ["import { ${1:map} } from 'rxjs/operators';", "$0"]
+  },
+  "Angular Component Spec": {
+    "prefix": "a-spec-component",
+    "description": "Angular component spec",
+    "body": [
+      "import { async, ComponentFixture, TestBed } from '@angular/core/testing';",
+      "import { ${1:Name}Component } from './${2:name}.component';",
+      "",
+      "describe('${1:Name}Component', () => {",
+      "\tlet component: ${1:Name}Component;",
+      "\tlet fixture: ComponentFixture<${1:Name}Component>;",
+      "",
+      "\tbeforeEach(async(() => {",
+      "\t\tTestBed.configureTestingModule({",
+      "\t\t\tdeclarations: [ ${1:Name}Component ]",
+      "\t\t}).compileComponents();",
+      "\t}));",
+      "",
+      "\tbeforeEach(() => {",
+      "\t\tfixture = TestBed.createComponent(${1:Name}Component);",
+      "\t\tcomponent = fixture.componentInstance;",
+      "\t\tfixture.detectChanges();",
+      "\t});",
+      "",
+      "\tit('$0', () => {",
+      "",
+      "\t});",
+      "});"
+    ]
+  },
+  "Angular Directive Spec": {
+    "prefix": "a-spec-directive",
+    "description": "Angular directive spec",
+    "body": [
+      "import { ${1:Name}Directive } from './${2:name}.directive';",
+      "",
+      "describe('${1:Name}Directive', () => {",
+      "\tlet directive: ${1:Name}Directive;",
+      "",
+      "\tbeforeEach(() => {",
+      "\t\tdirective = new ${1:Name}Directive();",
+      "\t});",
+      "",
+      "\tit('$0', () => {",
+      "\t});",
+      "});"
+    ]
+  },
+  "Angular Service Spec": {
+    "prefix": "a-spec-service",
+    "description": "Angular service spec",
+    "body": [
+      "import { TestBed, inject } from '@angular/core/testing';",
+      "import { ${1:Name}Service } from './${2:name}.service';",
+      "",
+      "describe('${1:Name}Service', () => {",
+      "\tbeforeEach(() => {",
+      "\t\tTestBed.configureTestingModule({",
+      "\t\t\tproviders: [${1:Name}Service]",
+      "\t\t});",
+      "\t});",
+      "",
+      "\tit('$0', inject([${1:Name}Service], (service: ${1:Name}Service) => {",
+      "\t}));",
+      "});"
+    ]
+  },
+  "Angular Pipe Spec": {
+    "prefix": "a-spec-pipe",
+    "description": "Angular pipe spec",
+    "body": [
+      "import { ${1:Name}Pipe } from './${2:name}.pipe';",
+      "",
+      "describe('${1:Name}Pipe', () => {",
+      "\tlet pipe: ${1:Name}Pipe;",
+      "",
+      "\tbeforeEach(() => {",
+      "\t\tpipe = new ${1:Name}Pipe();",
+      "\t});",
+      "",
+      "\tit('$0', () => {",
+      "\t});",
+      "});"
+    ]
   }
 }

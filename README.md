@@ -52,6 +52,10 @@ Type part of a snippet, press `enter`, and the snippet unfolds.
 | `a-service-httpclient`       | service with `HttpClient`                                    |
 | `a-ctor-skip-self`           | angular `NgModule`'s `skipself` constructor                  |
 | `a-subscribe`                | Rx Observable subscription                                   |
+| `a-spec-component`           | Angular component spec                                       |
+| `a-spec-directive`           | Angular directive spec                                       |
+| `a-spec-service`             | Angular service spec                                         |
+| `a-spec-pipe`                | Angular pipe spec                                            |
 
 ### Dockerfile Snippets
 
